@@ -42,7 +42,7 @@ export class OrdersAddCommentMagentoService {
         statusHistory: {
           ...rest,
           status: status ?? Status!,
-          comment: decodeURIComponent(comment? comment : (Comment? Comment : DEFAULT_COMMENT )),
+          comment: decodeURIComponent(comment ?? Comment ?? DEFAULT_COMMENT),
         },
       },
       entityId,
